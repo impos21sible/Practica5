@@ -1,0 +1,51 @@
+﻿<Window x:Class="Zadanie3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie3"
+        mc:Ignorable="d"
+        Title="Пример 3" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Comic Sans MS"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Пример 3"
+                   Grid.Row="0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="18" />
+        <TextBlock Text="Цена 1 кг конфет:"
+                   Grid.Row="1"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Margin="10,0,0,0" />
+        <TextBox x:Name="TbPricePerKg"
+                 Grid.Row="1"
+                 HorizontalAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 Padding="10 0" Width="100"
+                 BorderThickness="2" Margin="130,0,0,0" />
+        <Button x:Name="BtnCalculate"
+                Content="Рассчитать"
+                HorizontalAlignment="Left"
+                Margin="7,-2,0,2"
+                Width="100"
+                Background="#FF3985B0"
+                Foreground="White"
+                Click="BtnCalculate_Click" />
+        <ListBox x:Name="ListBoxResults"
+                 Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 Padding="10"
+                 BorderThickness="1" />
+    </Grid>
+</Window>
